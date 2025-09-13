@@ -1,0 +1,14 @@
+research_task:
+  description: >
+    Analyser le site web de la société {company_name} pour en synthétiser l'activité.
+  expected_output: >
+    Une synthèse avec l'ensemble des informations pertinentes sur le site web de la société {company_name}.
+  agent: researcher
+
+reporting_task:
+  description: >
+    créer une fiche détaillée sur la société {company_name}.
+  expected_output: >
+    Un rapport structuré en markdown présentant les informations recueillies sur le site web de la société {company_name}.
+  agent: reporting_analyst
+  output_file: report.md

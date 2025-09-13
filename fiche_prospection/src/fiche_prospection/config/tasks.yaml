@@ -1,0 +1,44 @@
+research_company_task:
+  description: >
+    Utilise l’outil de recherche pour collecter des infos sur {company_name}.
+    Quand tu appelles l’outil, tu dois OBLIGATOIREMENT fournir un input au format :
+    {"search_query": "mots clés de la recherche"}
+    Tu dois rechercher toutes les informations pertinentes disponibles en ligne sur l'entreprise {company_name}.
+    Il est important d'inclure :
+    - secteur d'activité
+    - taille et localisation
+    - organigramme (fondateurs, dirigeants clés)
+    - actualités récentes
+    - outils ou technologies utilisés (CRM, CMS, etc.)
+    - potentiels signaux d'achat
+  expected_output: >
+    Un rapport détaillé contenant les informations listées ci-dessus. Présente les données de manière claire, classées par section.
+  agent: researcher
+
+create_prospect_sheet_task:
+  description: >
+    À partir des informations collectées sur l'entreprise {company_name}, tu dois créer une fiche de prospection structurée.
+    Cette fiche doit :
+    - synthétiser les données clés
+    - faire ressortir les opportunités commerciales
+    - identifier les interlocuteurs pertinents
+    - proposer un angle d’approche adapté au profil de l’entreprise
+  expected_output: >
+    Une fiche de prospection structurée, prête à être utilisée par un commercial. Elle doit contenir :
+    - Résumé de l’entreprise
+    - Points clés / Signaux d’achat
+    - Contacts pertinents
+    - Proposition de valeur adaptée
+  agent: reporting_analyst
+
+write_outreach_message_task:
+  description: >
+    Tu dois rédiger un message de prospection personnalisé à destination de l’entreprise {company_name}, en t’appuyant sur la fiche de prospection.
+    Le message doit être :
+    - court, percutant et professionnel
+    - orienté sur les besoins ou signaux identifiés
+    - proposer un rendez-vous ou une mise en relation claire
+    - adapté au canal (email, LinkedIn, etc.)
+  expected_output: >
+    Un message de prospection prêt à être envoyé (email ou LinkedIn), personnalisé, avec un ton professionnel mais engageant.
+  agent: strategic_sales_rep

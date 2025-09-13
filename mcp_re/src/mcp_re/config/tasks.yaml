@@ -1,0 +1,14 @@
+simple_task:
+  description: |
+    Utilisateur: {{query}}
+
+    Objectif:
+      - Utilise l’outil MCP "rechercher_entreprise".
+      - Construis des arguments VALABLES pour ce tool, par ex.:
+        {"q": "<mot-clé secteur>", "code_commune": "34172", "per_page": 5}
+      - Si le secteur est "informatique", des mots-clés possibles: "informatique", "logiciels".
+      - N’emploie PAS de champ "commune" (utilise "code_commune").
+  expected_output: |
+    Un petit tableau Markdown avec les colonnes:
+      denomination | siren | siret | naf | commune | tranche
+  agent: prospecteur

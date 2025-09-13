@@ -1,0 +1,23 @@
+[project]
+name = "fiche_prospection"
+version = "0.1.0"
+description = "fiche_prospection using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.165.1,<1.0.0"
+]
+
+[project.scripts]
+fiche_prospection = "fiche_prospection.main:run"
+run_crew = "fiche_prospection.main:run"
+train = "fiche_prospection.main:train"
+replay = "fiche_prospection.main:replay"
+test = "fiche_prospection.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
