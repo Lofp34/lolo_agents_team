@@ -1,0 +1,15 @@
+---
+alwaysApply: true
+---
+### Guide global: MCP "recherche-entreprises" dans ce repo
+
+- **Point d'entrée**: le binaire MCP est lancé en STDIO depuis `mcp_re/src/mcp_re/main.py` via `StdioServerParameters(command="npx", args=["-y", "mcp-recherche-entreprises"])`.
+- **Ouverture des tools**: les outils MCP sont ouverts avec un adapter et passés vivants à l'agent: voir `with MCPServerAdapter(server_params) as mcp_tools` puis `build_crew(mcp_tools)`.
+- **Attendu côté agent**: l'agent doit utiliser UNIQUEMENT les tools MCP disponibles (voir `agents.yaml` et `tasks.yaml`).
+- **Schéma d'arguments recommandé**: pour la recherche, utiliser `code_commune` (ex: "34172" pour Montpellier) et des mots-clés de secteur dans `q`; ne pas utiliser `commune`.
+
+Références internes:
+- [mcp_re/src/mcp_re/main.py](mdc:mcp_re/src/mcp_re/main.py)
+- [mcp_re/src/mcp_re/crew.py](mdc:mcp_re/src/mcp_re/crew.py)
+- [mcp_re/src/mcp_re/config/agents.yaml](mdc:mcp_re/src/mcp_re/config/agents.yaml)
+- [mcp_re/src/mcp_re/config/tasks.yaml](mdc:mcp_re/src/mcp_re/config/tasks.yaml)

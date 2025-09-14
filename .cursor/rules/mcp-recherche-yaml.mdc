@@ -1,0 +1,18 @@
+---
+globs: *.yaml,*.yml
+---
+### Règle YAML: config agents/tasks pour MCP "recherche-entreprises"
+
+- **Agents (`agents.yaml`)**
+  - Rappeler à l'agent d'utiliser UNIQUEMENT les tools MCP.
+  - Exemple: `prospecteur.goal` et `prospecteur.backstory` insistent sur la lecture du schéma et des arguments valides.
+
+- **Tasks (`tasks.yaml`)**
+  - Décrire précisément l'outil attendu (ex: `rechercher_entreprise`).
+  - Spécifier des arguments valides: utiliser `code_commune` (ex: "34172"), indiquer des `q` pertinents (ex: "informatique", "logiciels"), `per_page` raisonnable.
+  - Interdire explicitement `commune` et privilégier `code_commune`.
+  - Définir un `expected_output` clair (ex: tableau Markdown: denomination | siren | siret | naf | commune | tranche).
+
+Références internes:
+- [mcp_re/src/mcp_re/config/agents.yaml](mdc:mcp_re/src/mcp_re/config/agents.yaml)
+- [mcp_re/src/mcp_re/config/tasks.yaml](mdc:mcp_re/src/mcp_re/config/tasks.yaml)

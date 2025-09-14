@@ -27,7 +27,7 @@ def run():
     # Référence INSEE: 34172 pour Montpellier. 
     user_query = input("Requête simple (ville + secteur) [ex: Montpellier informatique] : ").strip()
     if not user_query:
-        user_query = "Montpellier informatique"
+        user_query = "Montpellier formation"
 
     # On "déduit" juste un cas démo : si "Montpellier" est présent -> code_commune 34172
     code_commune = "34172" if "montpellier" in user_query.lower() else None
